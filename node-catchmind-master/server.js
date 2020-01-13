@@ -1,17 +1,35 @@
 var path = require('path');
-var app = require('express')();
+var express = require('express');
+var app = express();
 var url = require("url");
+var logger=require('morgan');
 
-app.set('port', (process.env.PORT || 80));
+var indexRouter = require('./router/rr');
+
+app.set('port', (process.env.PORT || 3000));
 
 
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-app.get("/", function(req, res){
-	console.log("get:detail_temp.html");
+// view 경로 설정
+app.set('views', __dirname );
+
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+
+app.use(express.static(__dirname + '/public'));
+app.use('/', indexRouter);
+module.exports = app;
+
+
+//app.get("/", function(req, res){
+//	console.log("get:detail_temp.html");
 	//최초 루트 get 요청에 대해, 서버에 존재하는 chatClient.html 파일 전송
 	// res.send("detail_temp.html", {root: __dirname});
-	res.render("detail_temp.html");
-});
+//	res.render("detail_temp.html");
+//});
 
 
 
@@ -26,7 +44,7 @@ app.use(function (req, res, next) {
 });
 
 var server = require('http').createServer(app);
-server.listen(80);
+server.listen(3000);
 console.log("listening at http://192.249.19.253:4480...");
 
 

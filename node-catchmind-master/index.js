@@ -1,4 +1,5 @@
 window.onload = function() {
+
     //클라이언트 소켓 생성
     var socket = io();
     //텍스트 박스에 이벤트 바인딩
