@@ -2,7 +2,7 @@ var path = require('path');
 var app = require('express')();
 var url = require("url");
 
-app.set('port', (process.env.PORT || 4480));
+app.set('port', (process.env.PORT || 80));
 
 
 
