@@ -4,7 +4,7 @@ var url = require("url");
 //var router = express.Router();
 //var router = require('./router/main')(app);
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 4480));
 
 //app.use(express.static(path.join(__dirname,'public'))); // 잘 작동함
 
@@ -31,8 +31,8 @@ app.use(function (req, res, next) {
 });
 
 var server = require('http').createServer(app);
-server.listen(3000);
-console.log("listening at http://127.0.0.1:3000...");
+server.listen(4480);
+console.log("listening at http://192.249.19.253:4480...");
 
 
 var io = require('socket.io').listen(server);
