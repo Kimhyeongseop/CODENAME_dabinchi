@@ -1,16 +1,9 @@
 var path = require('path');
 var app = require('express')();
 var url = require("url");
-//var router = express.Router();
-//var router = require('./router/main')(app);
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 4480));
 
-//app.use(express.static(path.join(__dirname,'public'))); // 잘 작동함
-
-
-// 간이 라우팅?
-// 기본
 
 
 app.get("/", function(req, res){
@@ -31,8 +24,8 @@ app.use(function (req, res, next) {
 });
 
 var server = require('http').createServer(app);
-server.listen(3000);
-console.log("listening at http://127.0.0.1:3000...");
+server.listen(4480);
+console.log("listening at http://192.249.19.253:4480...");
 
 
 var io = require('socket.io').listen(server);
@@ -133,7 +126,7 @@ io.on('connection', function(socket){
 	});
 
 	socket.on('sendMessage', function(response){
-		console.log('dfa')
+		console.log('message');
 		io.sockets.in(response.room_id).emit('displayMessage', {nickname: response.uid, msg: response.msg});
 		if(response.msg == room_question[response.room_id])
 		{
@@ -144,8 +137,7 @@ io.on('connection', function(socket){
 	//#
 	socket.on('playGame', function(response){
 		console.log('play');
-		io.sockets.emit('playGame',{time: response.time});
-		//io.sockets.in(response.room_id).emit('playGame', {time: response.time});
+		io.sockets.in(response.room_id).emit('playGame', {time: response.time});
 	});
 
 	socket.on('getQuestion', function(response){
@@ -154,6 +146,9 @@ io.on('connection', function(socket){
 		io.sockets.in(response.room_id).emit('getQuestion', {question: room_question[response.room_id]});
 	});
 
+	socket.on('em',function (response) {
+		console.log('emem')
+	})
 	socket.on('makeRoom', function(response){
 		console.log('make')
 		var id = 'aaaa';
@@ -174,7 +169,6 @@ io.on('connection', function(socket){
 	socket.on('playerList', function(response) {
 		if (room_uid[socket.id] == null) {
 		room_uid[socket.id] = response.uid;
-		console.log(socket.id)
 	}
 
 		console.log('list');
@@ -214,6 +208,7 @@ io.on('connection', function(socket){
 
         //#
         socket.on('disconnect', function(){
+        	io.sockets.emit('checkPlayer');
 		console.log('disconnected');
         });
 });

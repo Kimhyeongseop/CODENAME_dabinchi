@@ -11,7 +11,9 @@ window.onload = function() {
     var room_id = null;
 //<![CDATA[
     socket.on('idd', function (response) {
+        if (uid == null){
         uid = response.Id;
+    }
         room_id = 'aaaa';
 
         var title = 'tt';
@@ -151,9 +153,9 @@ window.onload = function() {
         }
     });
 
-    //   socket.on('checkPlayer', function(response){
-    //       socket.emit('playerList', {room_id: room_id, uid: response.uid});
-    //   });
+      socket.on('checkPlayer', function(response){
+           socket.emit('playerList', {room_id: room_id, uid: uid});
+       });
 
 
     socket.on('joinRoom', function (response) {
@@ -171,7 +173,7 @@ window.onload = function() {
         }
 
         $.each(response.list, function (key) {
-            $('<span style="display:inline-block; width:100%; height:30px; line-height:30px;">' + response.uid[key] + (master == response.uid[key] ? ' <strong style="color:red;">[방장]</strong>' : '') + '</span>').appendTo($('#player-list'));
+            $('<span style="display:inline-block; width:100%; height:30px; line-height:30px;">' + response.uid[key] + (master == response.uid[key] ? ' <strong style="color:red;">[출제]</strong>' : '') + '</span>').appendTo($('#player-list'));
         });
 
         $('#player-count').html(Object.keys(response.list).length);
@@ -194,17 +196,32 @@ window.onload = function() {
     var context = canvas.getContext('2d');
     var isDraw = false;
 
-    if (uid == master) {
-    var pl = document.getElementById("clear");
+
+
+
+    var cl = document.getElementById("clear");
+    if (cl.addEventListener)
+        cl.addEventListener("click", getClear, false);
+    else if (cl.attachEvent)
+        cl.attachEvent('onclick', getClear());
+
+
+
+
+    var pl = document.getElementById("play");
     if (pl.addEventListener)
-        pl.addEventListener("click", playGame(3), false);
+        pl.addEventListener("click", em, false);
     else if (pl.attachEvent)
-        pl.attachEvent('onclick', playGame(3));
+        pl.attachEvent('onclick', em());
+
+    function em() {
+        socket.emit('em');
+        playGame(3)
+    }
 
     function playGame(time) {
-        socket.emit('playGame', {room_id: room_id, time: time});
+            socket.emit('playGame', {room_id: room_id, time: time});
     }
-}
 
     $('#draw-tool').bind('mousedown', function(e){
         if(e.button == 0)
@@ -296,7 +313,7 @@ window.onload = function() {
     socket.on('displayMessage', function(response){
 
         var message = '['+ response.nickname + '님의 말' + '] ' + response.msg;
-        div.innerText += message + '\r\n';
+        div.innerText += '\n'+message + '\n';
         //채팅창 스크롤바 내리기
         div.scrollTop = div.scrollHeight
 
