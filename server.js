@@ -7,9 +7,9 @@ app.set('port', (process.env.PORT || 4480));
 
 
 app.get("/", function(req, res){
-	console.log("get:detail_temp.php");
+	console.log("get:detail_temp.html");
 	//최초 루트 get 요청에 대해, 서버에 존재하는 chatClient.html 파일 전송
-	res.sendFile("detail_temp.php", {root: __dirname});
+	res.sendFile("detail_temp.html", {root: __dirname});
 });
 
 
