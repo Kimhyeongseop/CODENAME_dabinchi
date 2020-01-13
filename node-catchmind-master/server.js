@@ -2,7 +2,7 @@ var path = require('path');
 var app = require('express')();
 var url = require("url");
 
-app.set('port', (process.env.PORT || 4480));
+app.set('port', (process.env.PORT || 3000));
 
 
 
@@ -24,8 +24,8 @@ app.use(function (req, res, next) {
 });
 
 var server = require('http').createServer(app);
-server.listen(4480);
-console.log("listening at http://192.249.19.253:4480...");
+server.listen(3000);
+console.log("listening at http://192.249.19.253:3000...");
 
 
 var io = require('socket.io').listen(server);
