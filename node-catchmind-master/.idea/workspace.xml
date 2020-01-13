@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="274194cc-ba6b-493f-9c5a-c5a0edb6bb8d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WEgXGw7PypgBCm8hudsXduELPG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\node-catchmind-master" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\node-catchmind-master" />
+      <recent name="C:\node-catchmind-master\views\template" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="274194cc-ba6b-493f-9c5a-c5a0edb6bb8d" name="Default Changelist" comment="" />
+      <created>1578720205175</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578720205175</updated>
+      <workItem from="1578720206424" duration="46721000" />
+      <workItem from="1578905624725" duration="560000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2471" y="247" key="FileChooserDialogImpl" timestamp="1578896113618">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="247" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578728583324" />
+    <state x="2471" y="247" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578896113618" />
+    <state x="2046" y="33" width="1427" height="913" key="dock-window-1" timestamp="1578720975858">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2046" y="33" width="1427" height="913" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578720975858" />
+    <state x="315" y="62" width="1577" height="948" key="dock-window-2" timestamp="1578723725138">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="220" y="52" width="1577" height="986" key="dock-window-2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578722499295" />
+    <state x="315" y="62" width="1577" height="948" key="dock-window-2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578723725138" />
+    <state x="2010" y="21" width="1527" height="995" key="dock-window-3" timestamp="1578725937922">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2010" y="21" width="1527" height="995" key="dock-window-3/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578725937922" />
+    <state x="2805" y="96" width="1783" height="889" key="dock-window-4" timestamp="1578906388030">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2007" y="51" width="1783" height="889" key="dock-window-4/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578903292377" />
+    <state x="2805" y="96" width="1783" height="889" key="dock-window-4/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578906388030" />
+    <state x="555" y="122" width="912" height="735" key="find.popup" timestamp="1578891425670">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="555" y="122" width="912" height="735" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578891425670" />
+    <state x="2475" y="122" width="592" height="735" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578720435280" />
+  </component>
+</project>
