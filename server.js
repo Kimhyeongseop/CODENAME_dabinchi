@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 });
 
 var server = require('http').createServer(app);
-server.listen(4480,'192.249.19.253');
+server.listen(4480);
 console.log("listening at http://192.249.19.253:4480/...");
 
 
