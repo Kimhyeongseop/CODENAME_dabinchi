@@ -25,7 +25,7 @@ app.use(function (req, res, next) {
 
 var server = require('http').createServer(app);
 server.listen(80);
-console.log("listening at http://192.249.19.253:80...");
+console.log("listening at http://192.249.19.253:4480...");
 
 
 var io = require('socket.io').listen(server);
