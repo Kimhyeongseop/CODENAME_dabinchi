@@ -6,7 +6,7 @@ var logger=require('morgan');
 
 var indexRouter = require('./router/rr');
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 80));
 
 
 app.use(logger('dev'));
@@ -44,7 +44,7 @@ app.use(function (req, res, next) {
 });
 
 var server = require('http').createServer(app);
-server.listen(3000);
+server.listen(80);
 console.log("listening at http://192.249.19.253:4480...");
 
 
