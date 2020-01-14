@@ -1,0 +1,119 @@
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <title>User Page</title>
+</head>
+<body style="background-image: url(bg4.PNG); background-size: 2000px 1400px;"  >
+
+<div style=" height:80px; background-color:#333333">
+    <img src ="/img/w3_1_title.PNG" width = "160" height = "80" align ="left"></div>
+
+
+<br><br>
+
+<center>
+    <div style="width:800px; height:830px;  background-image: url(pro22.png); background-color:; float:left; margin-left:570px; background-size: 800px 830px; ">
+        <br><br><br>
+        <center>
+                    <table border="0">
+                        <tr>
+                        <td><img src ="pro12.JPG" ><br><br></td>
+                        </tr>
+
+                        <tr>
+                            <td align="center"><font face="HY목각파임B"size="10" color="#00008b" align="left"> <B>캐치마인드 </B></font><br></td>
+                        </tr>
+
+                        <tr>
+                            <td align="center"><font face="HY목각파임B"size="3" color="" align="left"> <B>전 세계 넘버원 그림 퀴즈</B></font><br></td>
+                        </tr>
+                    </table>
+        </center>
+
+                            <form action="user.php" method="post" >
+                                <table border="0">
+
+
+                                    <tr>
+                                        <td><br><img src ="/img/pro7.JPG"  width="600" height="10"><br></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font face="나눔바른고딕 UltraLight" size="4" > 이름:  <input type="text" name="username"  maxlength="30"style="background-color: powderblue; height :30px; width : 400px"></font>
+                                            <font color="" face="나눔바른고딕 UltraLight" size="4" >  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;성별: </font>
+                                            <font color="#6495ed" face="나눔바른고딕 UltraLight" size="4" > 남  <input type="radio" name="gender" value = "m" maxlength="30"style="background-color: powderblue;  "></font>
+                                            <font color="#c71585" face="나눔바른고딕 UltraLight" size="4" >여  <input type="radio" name="gender" value = 'f' maxlength="30"style="background-color: powderblue;  "></font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src ="pro7.JPG" width="600" height="10"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font face="나눔바른고딕 UltraLight" size="4" > 아이디:  <input type="text" name="userid"  maxlength="30"style="background-color: powderblue; height :30px; width : 300px"></font>
+                                            <font face="나눔바른고딕 UltraLight" size="4" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;유저타입:</font>
+                                            <select name="usertype">
+                                                <option value="0">--------------------</option>
+                                                <option value="1">기존회원</option>
+                                                <option value="2">신규회원</option>
+                                            </select>
+                                        </td>
+                                    <tr>
+                                        <td><img src ="pro7.JPG" width="600" height="10"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font face="나눔바른고딕 UltraLight" size="4" > 비밀번호:  <input type="text" name="password"  maxlength="30"style="background-color: powderblue; height :30px; width : 285px"></font>
+                                            <font face="나눔바른고딕 UltraLight" size="3" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(8~20자리 특수문자 포함)</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src ="pro7.JPG" width="600" height="10"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><img src ="pro7.JPG" width="600" height="10"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><font face="나눔바른고딕 UltraLight" size="4" > 이메일:  <input type="text" name="email"  maxlength="30"style="background-color: powderblue; height :30px; width : 200px"></font>
+                                            <font face="나눔바른고딕 UltraLight" size="4" >
+                                                <select name="email_site">
+                                                    <option value="default">직접입력</option>
+                                                    <option value="kaist">@kaist.ac.kr</option>
+                                                    <option value="google">@gmail.com</option>
+                                                    <option value="naver">@naver.com</option>
+                                                    <option value="daum">@daum.net</option>
+                                                </select>
+                                            </font>
+                                            <font face="나눔바른고딕 UltraLight" size="3" >&nbsp;&nbsp;(외부메일 사용가능)</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src ="pro7.JPG" width="600" height="10"></td>
+                                    </tr>
+                                </table>
+
+                                <br><br><br>
+                                <button class="btn btn-danger" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;완료&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                            </form><br>
+
+                        </center>
+                    </table>
+                    <br><br>
+
+
+                <br>
+
+            </table>
+
+
+        </center>
+    </div>
+</center>
+
+
+
+
+

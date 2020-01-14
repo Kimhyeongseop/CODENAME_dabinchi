@@ -1,0 +1,11 @@
+<html>
+<div>
+<?php
+session_start();
+echo"$_SESSION[dfe]";
+echo"$_SESSION[roomname]";
+echo"<br>";
+echo"안녕";
+?>
+</div>
+</html>
