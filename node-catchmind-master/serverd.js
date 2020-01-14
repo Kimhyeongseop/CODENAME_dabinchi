@@ -11,7 +11,7 @@ var phpExpress = require('php-express')({
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 80));
 
 app.use(express.static('asset'));
 //app.use(express.static(path.join(__dirname,'public'))); // 잘 작동함
