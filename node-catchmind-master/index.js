@@ -17,11 +17,11 @@ window.onload = function() {
     }
         room_id = 'aaaa';
 
-        var title = 'tt';
+        var title = 'tt';// 여기고치면
 //#
-        if (uid == 0) {
+        if (uid == 0) { //방을 만든사람이 열로 들어오게
             socket.emit('makeRoom', {uid: uid, title: title});
-        } else {
+        } else {//방을 참가한 사람 열로 들오오게
             socket.emit('joinRoom', {room_id: room_id});
         }
 
@@ -34,6 +34,19 @@ window.onload = function() {
     });
 
 //#
+    function getRandString(length)
+    {
+        //# 임의 문자열 추출을 위한 기본 텍스트
+        var base = 'abcdefghijklmnopqrstuvwxyz0123456789';
+
+        //# 결과 생성
+        var result = '';
+        for(var i = 0; i < length; i++) result += base[Math.floor((Math.random() * ((base.length - 1) - 0 + 1)) + 0)];
+
+        //# 결과 반환
+        return result;
+    }
+
     socket.on('changeMaster', function (response) {
         master = response.uid;
         if (master == uid) {

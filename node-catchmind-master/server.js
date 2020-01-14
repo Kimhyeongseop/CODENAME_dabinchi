@@ -6,7 +6,7 @@ var logger=require('morgan');
 
 var indexRouter = require('./router/rr');
 
-app.set('port', (process.env.PORT || 80));
+app.set('port', (process.env.PORT || 3000));
 
 
 app.use(logger('dev'));
@@ -44,8 +44,8 @@ app.use(function (req, res, next) {
 });
 
 var server = require('http').createServer(app);
-server.listen(80);
-console.log("listening at http://192.249.19.253:4480...");
+server.listen(3000);
+console.log("listening at http://127.0.0.1:3000...");
 
 
 var io = require('socket.io').listen(server);
@@ -113,18 +113,6 @@ var uniqueID = (function(){
 	return function(){ return id++; }; //실제 아이디를 받아오면 됨
 })();
 
-function getRandString(length)
-{
-	//# 임의 문자열 추출을 위한 기본 텍스트
-	var base = 'abcdefghijklmnopqrstuvwxyz0123456789';
-
-	//# 결과 생성
-	var result = '';
-	for(var i = 0; i < length; i++) result += base[Math.floor((Math.random() * ((base.length - 1) - 0 + 1)) + 0)];
-
-	//# 결과 반환
-	return result;
-}
 //# 
 io.on('connection', function(socket){
 	var clientID = uniqueID();
@@ -142,6 +130,7 @@ io.on('connection', function(socket){
 	socket.on('joinRoom', function(response){
 			console.log('join'+socket.id);
 			socket.join(response.room_id);
+			room_title[id] = response.title;
 
 	});
 
