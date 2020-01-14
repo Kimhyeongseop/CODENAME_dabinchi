@@ -130,7 +130,6 @@ io.on('connection', function(socket){
 	socket.on('joinRoom', function(response){
 			console.log('join'+socket.id);
 			socket.join(response.room_id);
-			room_title[id] = response.title;
 
 	});
 
